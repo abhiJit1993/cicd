@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: cleanup-task
+spec:
+  steps:
+  - name: cleanup
+    image: alpine:latest
+    command:
+    - sh
+    - -c
+    args:
+    - |
+      # Add cleanup commands here
+      echo "Cleaning up..."
