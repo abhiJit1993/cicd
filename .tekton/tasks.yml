@@ -1,16 +1,1 @@
-apiVersion: tekton.dev/v1beta1
-kind: Task
-metadata:
-  name: nose-task
-spec:
-  steps:
-  - name: run-nose-tests
-    image: python:3.8
-    workingDir: /workspace/source  # Assuming your code is in this directory
-    command:
-    - sh
-    - -c
-    args:
-    - |
-      pip install -r requirements.txt  # Assuming you have a requirements.txt file
-      nosetests
+
